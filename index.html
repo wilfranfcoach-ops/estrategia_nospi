@@ -2,37 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubre Nospi</title>
     <style>
-        /* Estilos globales para centrar todo en la pantalla */
         body {
             margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        /* Contenedor principal */
-        .tarjeta-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: fit-content;
+        .contenedor-principal {
+            position: relative;
+            width: 450px; /* Ancho fijo para que no se mueva */
         }
 
-        /* Estilo de la imagen */
-        .imagen-tarjeta {
-            width: 450px;
+        .mi-imagen {
+            width: 100%;
             display: block;
         }
 
-        /* Estilo del botón */
         .btn-nospi {
+            position: absolute;
+            /* Estos valores mueven el botón con precisión de píxel */
+            top: 79%; 
+            left: 50%;
+            transform: translateX(-50%);
+            
+            /* Estilo del botón */
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
@@ -42,22 +40,15 @@
             font-size: 16px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            /* Ajuste vertical: cambia este valor para moverlo */
-            margin-top: -95px; 
-            margin-bottom: 30px;
-            transition: transform 0.2s;
-        }
-
-        .btn-nospi:hover {
-            transform: scale(1.05);
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
 
-    <div class="tarjeta-container">
-        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
-
+    <div class="contenedor-principal">
+        <img src="fondo_bono2.png" class="mi-imagen">
+        
         <button class="btn-nospi" onclick="window.location.href='#'">
             Descubre Nospi
         </button>
