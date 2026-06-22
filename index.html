@@ -2,52 +2,50 @@
 <html lang="es">
 <head>
     <style>
-    /* Contenedor principal: la base de todo */
-    .contenedor-tarjeta {
-        position: relative; /* Esto es lo que permite que el botón sepa dónde ubicarse */
-        width: 450px;      /* Tamaño fijo para que no se desconfigure */
-        margin: auto;
-    }
+        body { 
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; margin: 0; background-color: #f8f9fa; 
+        }
 
-    /* Tu imagen limpia (asegúrate de que el nombre sea el correcto) */
-    .imagen-limpia {
-        width: 100%;
-        display: block;
-    }
+        .contenedor-tarjeta {
+            position: relative; /* Esto es obligatorio para centrar el botón */
+            width: 500px;       /* Ajusta este ancho al tamaño de tu imagen */
+        }
 
-    /* El botón se posiciona exactamente donde tú quieras */
-    .btn-nospi {
-        position: absolute;
-        /* Cambia este porcentaje para subir o bajar el botón de forma precisa */
-        bottom: 15%; 
-        left: 50%;
-        transform: translateX(-50%);
-        
-        /* Estilos del botón */
-        background: linear-gradient(135deg, #005a8d, #32d74b);
-        color: white;
-        padding: 15px 40px;
-        border-radius: 50px;
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-</style>
+        .imagen-tarjeta {
+            width: 100%;        /* La imagen ocupa todo el contenedor */
+            display: block;
+        }
 
-<div class="contenedor-tarjeta">
-    <img src="tu_imagen_limpia.jpg" class="imagen-limpia">
-    <button class="btn-nospi">Descubre Nospi</button>
-</div>
-
+        .btn-nospi {
+            position: absolute; /* Permite mover el botón libremente sobre la imagen */
+            
+            /* CENTRADO HORIZONTAL PERFECTO */
+            left: 50%;
+            transform: translateX(-50%);
+            
+            /* POSICIÓN VERTICAL: Ajusta este porcentaje */
+            /* Si quieres bajarlo, aumenta este número (ej: 75%) */
+            /* Si quieres subirlo, disminuye este número (ej: 65%) */
+            top: 72%; 
+            
+            background: linear-gradient(135deg, #005a8d, #32d74b);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
 
     <div class="contenedor-tarjeta">
-        <img src="fondo_bono2.png" class="imagen-tarjeta">
-        <button class="btn-nospi" onclick="window.location.href='#'">
-            Descubre Nospi 
-        </button>
+        <img src="fondo:bono2.png" class="imagen-tarjeta">
+        <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
 </body>
