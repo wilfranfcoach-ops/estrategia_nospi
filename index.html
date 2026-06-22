@@ -5,70 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bono Nospi</title>
     <style>
-        /* Importamos una fuente más elegante */
+        /* Estilos generales para centrar todo */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: #f0f2f5; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #f8f9fa; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
-            margin: 0;
+            margin: 0; 
         }
+        
+        /* La tarjeta principal */
         .card { 
             background: white; 
             width: 90%; 
-            max-width: 400px; 
-            padding: 30px; 
-            border-radius: 25px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 450px; 
+            padding: 40px 25px; 
+            border-radius: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
             text-align: center; 
+            border: 1px solid #eee;
         }
-        /* Ajuste para el logo */
-        .logo { width: 120px; margin-bottom: 15px; }
-        h2 { color: #002d62; font-size: 2rem; margin: 10px 0; }
+
+        /* Estilo para el logo */
+        .logo { 
+            width: 140px; 
+            margin-bottom: 20px; 
+        }
+
+        /* Títulos y texto */
+        h2 { color: #002d62; font-size: 2.2rem; margin: 0 0 15px 0; }
+        p { color: #4a4a4a; font-size: 1.1rem; line-height: 1.5; margin-bottom: 25px; }
+
+        /* El recuadro del código */
         .code { 
-            font-size: 2.2rem; 
-            font-weight: bold; 
+            font-size: 2.5rem; 
+            font-weight: 800; 
             color: #d4a017; 
-            margin: 25px 0; 
+            margin: 20px 0; 
             border: 3px dashed #d4a017; 
-            padding: 15px; 
-            border-radius: 15px;
-            background: #fffdf5;
+            padding: 20px; 
+            border-radius: 20px; 
+            background-color: #fffdf5;
+            letter-spacing: 2px;
         }
-        p { color: #555; line-height: 1.6; }
-        /* Botón con degradado Nospi */
+
+        /* Botón estilo Nospi */
         button { 
-            background: linear-gradient(90deg, #005a8d, #32d74b); 
+            background: linear-gradient(135deg, #005a8d 0%, #32d74b 100%); 
             color: white; 
             border: none; 
-            padding: 16px 30px; 
+            padding: 18px; 
             border-radius: 50px; 
             cursor: pointer; 
             width: 100%; 
-            font-size: 1.1rem; 
-            font-weight: bold;
-            transition: transform 0.2s;
-            margin-top: 10px;
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        button:hover { transform: scale(1.03); }
+        
+        button:hover { 
+            transform: scale(1.02); 
+            box-shadow: 0 5px 15px rgba(50, 215, 75, 0.3);
+        }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <!-- Reemplaza la URL de abajo con la ruta de tu logo -->
-        <img src="https://raw.githubusercontent.com/wilfrancoch-ops/estrategia_nospi/main/logo_boton.jpg" class="logo" alt="Logo Nospi">
+        <img src="https://raw.githubusercontent.com/wilfrancoch-ops/estrategia_nospi/main/Logo8_Nospi.jpg" class="logo" alt="Logo Nospi">
         
         <h2>¡Lo lograste!</h2>
         <p>Tu bono de <b>$10,000</b> está listo para redimir.</p>
         
         <div class="code">NOSPI-2026</div>
         
-        <p>Muéstra esto en tu panadería más cercana y pregunta:<br> <i>¿Aquí reciben Nospi?</i></p>
+        <p>Muéstralo en tu panadería más cercana y pregunta:<br> <i>¿Aquí reciben Nospi?</i></p>
         
-        <button onclick="window.location.href='https://tusitio.com'">Descubre Nospi</button>
+        <button onclick="window.location.href='#'">Descubre Nospi</button>
     </div>
+
 </body>
 </html>
-
