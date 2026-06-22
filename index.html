@@ -9,35 +9,33 @@
             min-height: 100vh; margin: 0; background-color: #f8f9fa; 
         }
 
-        .tarjeta {
-                width: 500px; /* Prueba aumentando estos valores */
-                height: 400px; 
+       .tarjeta {
+                width: 500px;
+                height: 600px; /* Ajusta según el tamaño de tu imagen */
                 background-image: url('fondo_bono2.png');
-                /* '80% 80%' fuerza a la imagen a llenar todo el contenedor */
-                background-size: 95% 95%; 
+                background-size: contain;
                 background-repeat: no-repeat;
-                background-position: center;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                margin: auto; /* Esto ayuda a centrar la tarjeta en la página */
-      }
+                background-position: center top;
+                position: relative; /* ¡Esto es clave! Le dice al botón que el límite es esta tarjeta */
+            }
 
-        .btn-nospi {
-            background: linear-gradient(135deg, #005a8d, #32d74b);
-            color: white;
-            border: none;
-            padding: 10px 60px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: 0.3s;
-            padding-bottom: 40px;
-        
-        }
-    </style>
+.btn-nospi {
+                position: absolute; /* Esto saca al botón del flujo normal */
+                bottom: 50px;      /* <--- CONTROLA ESTO: Distancia desde el borde inferior */
+                left: 50%;         /* Centrado horizontal */
+                transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
+                
+                background: linear-gradient(135deg, #005a8d, #32d74b);
+                color: white;
+                border: none;
+                padding: 18px 60px;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    ]
+        </style>
 </head>
 <body>
 
