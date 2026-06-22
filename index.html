@@ -5,19 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bono Nospi</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f9; display: flex; justify-content: center; padding-top: 50px; }
-        .card { background: white; width: 90%; max-width: 400px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
-        .code { font-size: 2rem; font-weight: bold; color: #d4a017; margin: 20px 0; border: 2px dashed #d4a017; padding: 10px; }
-        button { background: #333; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; width: 100%; font-size: 1rem; }
+        /* Importamos una fuente más elegante */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0;
+        }
+        .card { 
+            background: white; 
+            width: 90%; 
+            max-width: 400px; 
+            padding: 30px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            text-align: center; 
+        }
+        /* Ajuste para el logo */
+        .logo { width: 120px; margin-bottom: 15px; }
+        h2 { color: #002d62; font-size: 2rem; margin: 10px 0; }
+        .code { 
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            color: #d4a017; 
+            margin: 25px 0; 
+            border: 3px dashed #d4a017; 
+            padding: 15px; 
+            border-radius: 15px;
+            background: #fffdf5;
+        }
+        p { color: #555; line-height: 1.6; }
+        /* Botón con degradado Nospi */
+        button { 
+            background: linear-gradient(90deg, #005a8d, #32d74b); 
+            color: white; 
+            border: none; 
+            padding: 16px 30px; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 1.1rem; 
+            font-weight: bold;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+        button:hover { transform: scale(1.03); }
     </style>
 </head>
 <body>
     <div class="card">
+        <!-- Reemplaza la URL de abajo con la ruta de tu logo -->
+        <img src="https://raw.githubusercontent.com/wilfrancoch-ops/estrategia_nospi/main/logo_boton.jpg" class="logo" alt="Logo Nospi">
+        
         <h2>¡Lo lograste!</h2>
         <p>Tu bono de <b>$10,000</b> está listo para redimir.</p>
+        
         <div class="code">NOSPI-2026</div>
-        <p>Muéstra esto en tu panafería más cercana y pregunta: <i>¿Aquí reciben Nospi?</i></p>
+        
+        <p>Muéstra esto en tu panadería más cercana y pregunta:<br> <i>¿Aquí reciben Nospi?</i></p>
+        
         <button onclick="window.location.href='https://tusitio.com'">Descubre Nospi</button>
     </div>
 </body>
 </html>
+
