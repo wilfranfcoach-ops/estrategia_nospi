@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { 
             display: flex; justify-content: center; align-items: center; 
             min-height: 100vh; margin: 0; background-color: #f8f9fa; 
         }
 
-       .tarjeta {
-                width: 500px;
-                height: 600px; /* Ajusta según el tamaño de tu imagen */
-                background-image: url('fondo_bono2.png');
-               background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* Le damos altura suficiente para que quepa todo */
-                padding-top: 450px; 
-                padding-bottom: 50px;
-            }
+        .contenedor-principal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Esto mantiene la imagen y el botón juntos */
+            gap: 0; 
+        }
+
+        .imagen-tarjeta {
+            width: 500px;
+            display: block;
+        }
 
         .btn-nospi {
             background: linear-gradient(135deg, #005a8d, #32d74b);
@@ -35,16 +31,20 @@
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             
-            /* AQUÍ ESTÁ EL TRUCO PARA SUBIRLO */
-            margin-top: -60px; 
+            /* AJUSTA ESTO PARA SUBIR EL BOTÓN */
+            /* Pon un número negativo más grande para subirlo más */
+            margin-top: -90px; 
+            margin-bottom: 20px;
         }
-           
-        </style>
+    </style>
 </head>
 <body>
 
-    <div class="tarjeta">
-        <button class="btn-nospi" onclick="window.location.href='#'">Descubre Nospi</button>
+    <div class="contenedor-principal">
+        <img src="fondo_bono2.png" class="imagen-tarjeta">
+        <button class="btn-nospi" onclick="window.location.href='#'">
+            Descubre Nospi
+        </button>
     </div>
 
 </body>
