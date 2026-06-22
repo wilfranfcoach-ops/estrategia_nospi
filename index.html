@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bono Nospi</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .card { background: white; width: 90%; max-width: 400px; padding: 20px; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; }
-        
-        /* Contenedor de la imagen superior */
-        .header-img { width: 100%; border-radius: 15px 15px 0 0; margin-bottom: 15px; }
-        
-        .logo { width: 100px; margin: 10px 0; }
-        h2 { color: #002d62; margin: 5px 0; }
-        .code { font-size: 1.8rem; font-weight: bold; color: #d4a017; margin: 15px 0; border: 2px dashed #d4a017; padding: 10px; background: #fffdf5; }
-        button { background: linear-gradient(90deg, #005a8d, #32d74b); color: white; border: none; padding: 15px; border-radius: 50px; cursor: pointer; width: 100%; font-weight: bold; }
+        body { 
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; margin: 0; background-color: #f8f9fa; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+
+        .tarjeta-container {
+            width: 400px;
+            /* Aquí ponemos la imagen que recortaste sin el botón */
+            background-image: url('fondo_bono.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Espacio para que el botón no quede pegado a la imagen */
+        .espacio-boton { height: 280px; }
+
+        .btn-nospi {
+            background: linear-gradient(135deg, #005a8d, #32d74b);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn-nospi:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="logo_boton.png" alt="Header" class="header-img">
-        
-        <h2>¡Lo lograste!</h2>
-        <p>Tu bono de <b>$10,000</b> está listo.</p>
-        <div class="code">NOSPI-2026</div>
-        <p>Muéstralo en tu panadería y pregunta: <i>¿Aquí reciben Nospi?</i></p>
-        <button>Descubre Nospi</button>
+
+    <div class="tarjeta-container">
+        <div class="espacio-boton"></div> <button class="btn-nospi" onclick="window.location.href='https://tusitio.com'">
+            Descubre Nospi
+        </button>
     </div>
+
 </body>
 </html>
