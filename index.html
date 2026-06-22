@@ -2,27 +2,28 @@
 <html lang="es">
 <head>
     <style>
-    /* El contenedor es el "padre" que define el tamaño */
+    /* Contenedor principal: la base de todo */
     .contenedor-tarjeta {
-        position: relative;
-        width: 450px; /* Ajusta este ancho a tu gusto */
+        position: relative; /* Esto es lo que permite que el botón sepa dónde ubicarse */
+        width: 450px;      /* Tamaño fijo para que no se desconfigure */
         margin: auto;
     }
 
-    /* La imagen se estira para llenar el contenedor */
-    .imagen-tarjeta {
+    /* Tu imagen limpia (asegúrate de que el nombre sea el correcto) */
+    .imagen-limpia {
         width: 100%;
         display: block;
     }
 
-    /* El botón se posiciona respecto al padre */
+    /* El botón se posiciona exactamente donde tú quieras */
     .btn-nospi {
         position: absolute;
-        bottom: 60px; /* Ajusta este valor (ej: 40px, 50px, 60px) para subir/bajar */
+        /* Cambia este porcentaje para subir o bajar el botón de forma precisa */
+        bottom: 15%; 
         left: 50%;
         transform: translateX(-50%);
         
-        /* Estilo del botón */
+        /* Estilos del botón */
         background: linear-gradient(135deg, #005a8d, #32d74b);
         color: white;
         padding: 15px 40px;
@@ -30,8 +31,15 @@
         border: none;
         font-weight: bold;
         cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
 </style>
+
+<div class="contenedor-tarjeta">
+    <img src="tu_imagen_limpia.jpg" class="imagen-limpia">
+    <button class="btn-nospi">Descubre Nospi</button>
+</div>
+
 </head>
 <body>
 
