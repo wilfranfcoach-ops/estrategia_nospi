@@ -7,38 +7,33 @@
             min-height: 100vh; margin: 0; background-color: #f8f9fa; 
         }
 
-        .contenedor-tarjeta {
-            position: relative; /* Esto es obligatorio para centrar el botón */
-            width: 500px;       /* Ajusta este ancho al tamaño de tu imagen */
-        }
+       .contenedor-tarjeta {
+    position: relative;
+    width: 100%;       /* O ajusta a un valor fijo como 450px */
+    max-width: 500px;
+    margin: 0 auto;    /* Esto centra toda la tarjeta en la página */
+}
 
-        .imagen-tarjeta {
-            width: 100%;        /* La imagen ocupa todo el contenedor */
-            display: block;
-        }
+.imagen-tarjeta {
+    width: 100%;       /* La imagen llena el contenedor */
+    display: block;    /* Elimina espacios en blanco no deseados debajo */
+}
 
-        .btn-nospi {
-            position: absolute; /* Permite mover el botón libremente sobre la imagen */
-            
-            /* CENTRADO HORIZONTAL PERFECTO */
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* POSICIÓN VERTICAL: Ajusta este porcentaje */
-            /* Si quieres bajarlo, aumenta este número (ej: 75%) */
-            /* Si quieres subirlo, disminuye este número (ej: 65%) */
-            top: 72%; 
-            
-            background: linear-gradient(135deg, #005a8d, #32d74b);
-            color: white;
-            padding: 18px 50px;
-            border-radius: 50px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            white-space: nowrap;
-        }
+.btn-nospi {
+    position: absolute;
+    bottom: 12%;       /* Ubicación vertical precisa */
+    left: 50%;         /* Centrado horizontal */
+    transform: translateX(-50%);
+    
+    /* Tus estilos de botón */
+    background: linear-gradient(135deg, #005a8d, #32d74b);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
     </style>
 </head>
 <body>
