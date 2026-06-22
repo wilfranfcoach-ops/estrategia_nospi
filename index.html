@@ -10,18 +10,19 @@
         }
 
         .tarjeta {
-            width: 650px; 
-            height: 620px;
-            /* Usamos la imagen LIMPIA (sin el botón viejo) */
-            background-image: url('fondo_bono2.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end; /* Alinea el botón al final */
-            padding-bottom: 35px; /* Ajusta la distancia desde el borde inferior */
-        }
+                width: 600px; /* Prueba aumentando estos valores */
+                height: 700px; 
+                background-image: url('fondo_bono2.png');
+                /* '100% 100%' fuerza a la imagen a llenar todo el contenedor */
+                background-size: 100% 100%; 
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding-bottom: 50px;
+                margin: auto; /* Esto ayuda a centrar la tarjeta en la página */
+      }
 
         .btn-nospi {
             background: linear-gradient(135deg, #005a8d, #32d74b);
