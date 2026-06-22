@@ -26,9 +26,12 @@
         /* Botón posicionado de forma absoluta para no desconfigurarse */
         .btn-nospi {
             position: absolute;
-            bottom: 12%;      /* Ajusta este % para subir/bajar el botón */
-            left: 50%;        /* Centrado horizontal */
-            transform: translateX(-50%);
+                /* Disminuye este valor para que el botón baje hacia el borde inferior */
+                bottom: 8%; 
+                left: 50%;
+                transform: translateX(-50%);
+        
+        /* ... el resto de tus estilos igual ... */
             
             /* Diseño del botón */
             background: linear-gradient(135deg, #005a8d, #32d74b);
