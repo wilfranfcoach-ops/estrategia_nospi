@@ -2,39 +2,36 @@
 <html lang="es">
 <head>
     <style>
-        body { 
-            display: flex; justify-content: center; align-items: center; 
-            min-height: 100vh; margin: 0; background-color: #f8f9fa; 
-        }
+    /* El contenedor es el "padre" que define el tamaño */
+    .contenedor-tarjeta {
+        position: relative;
+        width: 450px; /* Ajusta este ancho a tu gusto */
+        margin: auto;
+    }
 
-        .contenedor-tarjeta {
-            position: relative; /* El botón se ajustará a los bordes de este contenedor */
-            width: 500px; /* Ajusta este ancho y todo crecerá proporcionalmente */
-        }
+    /* La imagen se estira para llenar el contenedor */
+    .imagen-tarjeta {
+        width: 100%;
+        display: block;
+    }
 
-        .imagen-tarjeta {
-            width: 100%; /* La imagen siempre ocupará el 100% del contenedor */
-            display: block;
-        }
-
-        .btn-nospi {
-            position: absolute; /* Sacamos el botón del flujo normal */
-            bottom: 40px;       /* El botón siempre estará a 40px del borde inferior */
-            left: 50%;
-            transform: translateX(-50%); /* Centrado horizontal perfecto */
-            
-            background: linear-gradient(135deg, #005a8d, #32d74b);
-            color: white;
-            border: none;
-            padding: 18px 60px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            white-space: nowrap;
-        }
-    </style>
+    /* El botón se posiciona respecto al padre */
+    .btn-nospi {
+        position: absolute;
+        bottom: 60px; /* Ajusta este valor (ej: 40px, 50px, 60px) para subir/bajar */
+        left: 50%;
+        transform: translateX(-50%);
+        
+        /* Estilo del botón */
+        background: linear-gradient(135deg, #005a8d, #32d74b);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
 
