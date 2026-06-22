@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nospi</title>
     <style>
+        /* Centrado total en la pantalla */
         body { 
             display: flex; justify-content: center; align-items: center; 
             min-height: 100vh; margin: 0; background-color: #f8f9fa; 
         }
 
-       .contenedor-tarjeta {
-    position: relative;
-    width: 100%;       /* O ajusta a un valor fijo como 450px */
-    max-width: 500px;
-    margin: 0 auto;    /* Esto centra toda la tarjeta en la página */
-}
+        /* Contenedor que mantiene la relación de aspecto */
+        .contenedor-tarjeta {
+            position: relative;
+            width: 450px; /* Ajusta el ancho aquí */
+        }
 
-.imagen-tarjeta {
-    width: 100%;       /* La imagen llena el contenedor */
-    display: block;    /* Elimina espacios en blanco no deseados debajo */
-}
+        /* Imagen que llena el contenedor */
+        .imagen-tarjeta {
+            width: 100%;
+            display: block;
+        }
 
-.btn-nospi {
-    position: absolute;
-    bottom: 12%;       /* Ubicación vertical precisa */
-    left: 50%;         /* Centrado horizontal */
-    transform: translateX(-50%);
-    
-    /* Tus estilos de botón */
-    background: linear-gradient(135deg, #005a8d, #32d74b);
-    color: white;
-    padding: 15px 40px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-}
+        /* Botón posicionado de forma absoluta para no desconfigurarse */
+        .btn-nospi {
+            position: absolute;
+            bottom: 12%;      /* Ajusta este % para subir/bajar el botón */
+            left: 50%;        /* Centrado horizontal */
+            transform: translateX(-50%);
+            
+            /* Diseño del botón */
+            background: linear-gradient(135deg, #005a8d, #32d74b);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
 
-<div class="contenedor-tarjeta">
-    <img src="fondo_boton2.png" class="imagen-tarjeta">
-    <button class="btn-nospi">Descubre Nospi</button>
-</div>
+    <div class="contenedor-tarjeta">
+        <img src="tu_imagen_limpia.jpg" class="imagen-tarjeta" alt="Bono Nospi">
+        
+        <button class="btn-nospi" onclick="window.location.href='https://nospi.com'">
+            Descubre Nospi
+        </button>
+    </div>
 
 </body>
 </html>
