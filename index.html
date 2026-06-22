@@ -6,52 +6,41 @@
     <style>
         body { 
             display: flex; justify-content: center; align-items: center; 
-            min-height: 100vh; margin: 0; background-color: #e9ecef; 
-            font-family: 'Segoe UI', sans-serif; 
+            min-height: 100vh; margin: 0; background-color: #f8f9fa; 
         }
 
-        .tarjeta-container {
-            width: 500px; /* Tamaño un poco más grande */
-            height: 500px; 
-            /* Usamos la imagen que ya tiene el botón borrado */
-            background-image: url('fondo_bono.jpg');
+        .tarjeta {
+            width: 450px; 
+            height: 520px;
+            /* Usamos la imagen LIMPIA (sin el botón viejo) */
+            background-image: url('fondo_limpio.jpg');
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: center top;
+            background-position: center;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Alinea el botón al final de la tarjeta */
-            align-items: center;
-            padding-bottom: 40px; /* Ajusta qué tan arriba o abajo queda el botón */
+            justify-content: center;
+            align-items: flex-end; /* Alinea el botón al final */
+            padding-bottom: 35px; /* Ajusta la distancia desde el borde inferior */
         }
 
         .btn-nospi {
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
-            padding: 18px 50px;
+            padding: 18px 60px;
             border-radius: 50px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            text-transform: uppercase;
-        }
-
-        .btn-nospi:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
         }
     </style>
 </head>
 <body>
 
-    <div class="tarjeta-container">
-        <!-- El botón ahora se coloca automáticamente en la parte baja de la imagen -->
-        <button class="btn-nospi" onclick="window.location.href='#'">
-            Descubre Nospi
-        </button>
+    <div class="tarjeta">
+        <button class="btn-nospi" onclick="window.location.href='#'">Descubre Nospi</button>
     </div>
 
 </body>
