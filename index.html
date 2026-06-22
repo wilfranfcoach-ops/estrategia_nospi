@@ -20,15 +20,16 @@
         }
 
         .btn-nospi {
-            position: absolute; /* Saca al botón del flujo normal */
-            left: 50%;          /* Centrado horizontal */
-            transform: translateX(-50%); /* Ajuste fino de centrado */
+           position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                /* ELIMINA CUALQUIER OTRA PROPIEDAD 'top' O 'bottom' */
+                top: auto;
+                bottom: auto;
             
-            /* --- AJUSTA ESTE VALOR PARA BAJAR EL BOTÓN --- */
-            /* Aumenta el porcentaje (ej: 75%) para bajarlo más */
-            /* Disminuye el porcentaje (ej: 70%) para subirlo */
-            top: 50%;
-            
+                /* USA ESTO PARA BAJARLO. Un valor positivo lo baja, negativo lo sube. */
+                margin-top: 350px;
             /* Estilo del botón */
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
