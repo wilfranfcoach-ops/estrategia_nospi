@@ -4,17 +4,17 @@
     <style>
         body {
             margin: 0;
-            background-color: #ffffff; /* Fondo blanco garantizado */
+            background-color: #ffffff; /* Fondo blanco */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        /* 1. Usamos CSS Grid para unir la imagen y el botón en un solo bloque */
+        /* Contenedor principal que une imagen y botón */
         .tarjeta-container {
             display: grid;
-            width: 450px; /* Ancho fijo de tu tarjeta */
+            width: 450px; 
             justify-items: center;
         }
 
@@ -30,10 +30,11 @@
             grid-column: 1;
             z-index: 10;
             
-            /* 2. Ajuste fino usando margen superior (margin-top) */
-            /* Este valor mueve el botón hacia abajo desde el borde superior de la tarjeta */
-            /* Aumenta el número para bajarlo, disminúyelo para subirlo */
-            margin-top: 385px; 
+            /* AJUSTE FINO:
+               Hemos aumentado este valor a 420px para bajar el botón.
+               - Si todavía falta bajarlo más: prueba 430px.
+               - Si te pasaste y quieres subirlo un poco: prueba 410px. */
+            margin-top: 420px; 
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
