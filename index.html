@@ -26,18 +26,13 @@
 
         .btn-nospi {
           position: absolute;
-            /* Esto fija el punto central del botón exactamente en el 50% de ancho */
             left: 50%;
-            
-            /* ESTO ES LA MAGIA: 
-               translateX(-50%) mueve el botón hacia la izquierda basándose en SU PROPIO ANCHO, 
-               no en el contenedor. Esto hace que el 'left' sea independiente. */
             transform: translateX(-50%);
             
-            /* Ajusta este valor para subir o bajar */
-            top: 98%; 
+            /* CAMBIA ESTO: De 95% a píxeles fijos */
+            /* Empieza probando con 300px o 350px e ir ajustando */
+            top: 350px; 
             
-            /* Añade esto para evitar que el navegador recalcule saltos raros */
             margin: 0;
             white-space: nowrap;
             z-index: 10;
