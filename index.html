@@ -5,19 +5,17 @@
     <style>
         body {
             margin: 0;
-            background-color: #ffffff; /* Fondo blanco */
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
-            padding-top: 50px;
+            align-items: flex-start; /* Alinea al tope para evitar saltos */
+            min-height: 100vh;
         }
 
-        /* 1. Este contenedor es el "ancla" */
         .tarjeta-container {
-            position: relative;
-            width: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative; /* ¡Esto es lo que mantiene todo junto! */
+            width: 450px; 
+            margin-top: 20px;
         }
 
         .imagen-tarjeta {
@@ -25,11 +23,14 @@
             display: block;
         }
 
-        /* 2. El botón ahora tiene una posición controlada */
         .btn-nospi {
-            /* Usamos un margen negativo para "subir" el botón sobre la imagen */
-            /* Ajusta este valor: si sube mucho, hazlo menos negativo; si baja mucho, más negativo */
-            margin-top: -70px; 
+            /* Posición absoluta respecto a su padre (.tarjeta-container) */
+            position: absolute;
+            
+            /* Ajustamos la posición vertical en porcentaje para que sea elástica pero estable */
+            top: 83%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
@@ -41,6 +42,7 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
+            white-space: nowrap;
         }
     </style>
 </head>
