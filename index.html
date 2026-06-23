@@ -14,8 +14,7 @@
         }
 
         .contenedor-tarjeta {
-            /* Este es el marco que contiene todo */
-            position: relative; 
+            position: relative;
             width: 450px;
         }
 
@@ -25,15 +24,18 @@
         }
 
         .btn-nospi {
-            /* Posición absoluta para moverlo libremente sobre la imagen */
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             
-            /* --- AJUSTE AQUÍ --- */
-            /* En lugar de 'top', usamos 'bottom'. 
-               Esto mide la distancia desde abajo hacia arriba. */
-            bottom: 60px; 
+            /* --- AJUSTES FINALES --- */
+            /* 1. Mover a la IZQUIERDA: disminuye el valor (48.5%) */
+            left: 48.5%; 
+            
+            /* 2. Mover hacia ABAJO: aumenta el valor del bottom */
+            /* Si quieres bajarlo más, disminuye este número (ej. 30px) */
+            bottom: 40px; 
+            
+            transform: translateX(-50%);
+            /* ------------------------ */
             
             padding: 5px 40px; 
             background: linear-gradient(135deg, #005a8d, #32d74b);
