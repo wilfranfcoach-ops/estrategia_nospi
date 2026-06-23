@@ -5,15 +5,14 @@
     <style>
         body {
             margin: 0;
-            background-color: #ffffff;
+            background-color: #ffffff; /* Fondo blanco garantizado */
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Alinea al tope para evitar saltos */
             min-height: 100vh;
         }
 
         .tarjeta-container {
-            position: relative; /* ¡Esto es lo que mantiene todo junto! */
+            position: relative; /* Punto de anclaje para el botón */
             width: 450px; 
             margin-top: 20px;
         }
@@ -24,13 +23,14 @@
         }
 
         .btn-nospi {
-            /* Posición absoluta respecto a su padre (.tarjeta-container) */
             position: absolute;
-            
-            /* Ajustamos la posición vertical en porcentaje para que sea elástica pero estable */
-            top: 83%; 
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+            
+            /* AJUSTE FINO: 
+               Si quieres bajarlo, aumenta este número (ej. 675px, 680px).
+               Si quieres subirlo, disminuye este número (ej. 665px, 660px). */
+            top: 670px; 
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
