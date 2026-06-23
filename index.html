@@ -2,22 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Descubre Nospi</title>
     <style>
-        /* 1. Fondo blanco puro en toda la pantalla */
         body {
             margin: 0;
-            background-color: #ffffff;
+            background-color: #ffffff; /* Fondo blanco */
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding-top: 50px;
         }
 
-        /* 2. El contenedor es el "ancla" donde vive el botón */
+        /* 1. Este contenedor es el "ancla" */
         .tarjeta-container {
             position: relative;
             width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -25,15 +25,11 @@
             display: block;
         }
 
-        /* 3. Botón posicionado específicamente sobre el espacio blanco */
+        /* 2. El botón ahora tiene una posición controlada */
         .btn-nospi {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* Ajuste vertical: controla la altura exacta en la franja blanca */
-            /* Si quieres bajarlo, aumenta este valor. Si quieres subirlo, disminúyelo. */
-            top: 760px; 
+            /* Usamos un margen negativo para "subir" el botón sobre la imagen */
+            /* Ajusta este valor: si sube mucho, hazlo menos negativo; si baja mucho, más negativo */
+            margin-top: -70px; 
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
@@ -45,7 +41,6 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
-            white-space: nowrap;
         }
     </style>
 </head>
