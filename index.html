@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Descubre Nospi</title>
     <style>
+        /* Centrado de toda la página */
         body {
             margin: 0;
             display: flex;
@@ -12,6 +14,7 @@
             background-color: #f8f9fa;
         }
 
+        /* Contenedor principal para anclar el botón */
         .contenedor-tarjeta {
             position: relative;
             width: 450px;
@@ -27,11 +30,14 @@
             left: 50%;
             transform: translateX(-50%);
             
-            /* AJUSTE: Aumenté de 670px a 690px para bajarlo un poco más */
-            top: 690px; 
+            /* --- AJUSTE EXACTO --- */
+            /* Si quieres subirlo, disminuye este número (ej. 540px) */
+            /* Si quieres bajarlo, aumenta este número (ej. 560px) */
+            top: 550px; 
             
-            /* AJUSTE: Reduje el primer valor de 10px a 5px para hacerlo más delgado */
+            /* Padding para el grosor del botón */
             padding: 5px 40px; 
+            /* --------------------- */
             
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
