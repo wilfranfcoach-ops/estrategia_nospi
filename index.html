@@ -4,37 +4,33 @@
     <style>
         body {
             margin: 0;
-            background-color: #ffffff; /* Fondo blanco */
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        /* Contenedor principal que une imagen y botón */
+        /* Contenedor que actúa como ancla */
         .tarjeta-container {
-            display: grid;
-            width: 450px; 
-            justify-items: center;
+            position: relative; /* ¡CLAVE! Todo lo de adentro se posiciona respecto a esto */
+            width: 450px;
         }
 
         .imagen-tarjeta {
             width: 100%;
             display: block;
-            grid-row: 1;
-            grid-column: 1;
         }
 
         .btn-nospi {
-            grid-row: 1;
-            grid-column: 1;
-            z-index: 10;
+            position: absolute; /* Se despega del flujo normal para flotar sobre la imagen */
+            left: 50%;
+            transform: translateX(-50%);
             
             /* AJUSTE FINO:
-               Hemos aumentado este valor a 420px para bajar el botón.
-               - Si todavía falta bajarlo más: prueba 430px.
-               - Si te pasaste y quieres subirlo un poco: prueba 410px. */
-            margin-top: 420px; 
+               Este valor controla la posición desde el borde superior de la tarjeta.
+               Como se bajó mucho antes, vamos a reducir este valor para que suba. */
+            top: 380px; 
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
@@ -45,7 +41,7 @@
             font-size: 16px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            white-space: nowrap;
+            z-index: 10;
         }
     </style>
 </head>
