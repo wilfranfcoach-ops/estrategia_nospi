@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bono Nospi</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
             background-color: #ffffff;
             display: flex;
             justify-content: center;
@@ -12,40 +15,45 @@
             min-height: 100vh;
         }
 
-        .tarjeta-contenedor {
+        /* Contenedor principal que se adapta al ancho de la pantalla */
+        .tarjeta-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 90%; 
-            max-width: 450px; 
+            width: 90%;       /* Ocupa el 90% del ancho en móviles */
+            max-width: 450px; /* En computadoras no pasará de 450px */
         }
 
         .imagen-tarjeta {
             width: 100%;
             display: block;
+            /* La imagen se estira proporcionalmente al contenedor */
         }
 
+        /* Botón con posición relativa dentro del bloque */
         .btn-nospi {
-            /* AJUSTE FINO:
-               Estaba en -80px. Al subirlo a -60px, el botón baja.
-               - Si quieres bajarlo aún más, intenta con -50px o -40px.
-               - Si quieres que suba, intenta con -70px o -80px. */
-            margin-top: -60px; 
-            
-            padding: 10px 45px;
+            width: 80%;      /* El botón ocupará el 80% del ancho del contenedor */
+            margin-top: 15px; /* Separación clara de 15px debajo de la imagen */
+            padding: 15px 0;
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 1.1rem;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            z-index: 10;
-            white-space: nowrap;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="tarjeta-contenedor">
-        <img src="fondo_bono2.png" class="imagen-tarjeta"
+
+    <div class="tarjeta-wrapper">
+        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
+        <button class="btn-nospi">Descubre Nospi</button>
+    </div>
+
+</body>
+</html>
+
