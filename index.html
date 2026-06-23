@@ -2,21 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Descubre Nospi</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             background-color: #f8f9fa;
         }
 
-        /* Este contenedor es el "marco" de tu diseño */
+        /* Creamos un contenedor que apila elementos verticalmente */
         .contenedor-tarjeta {
-            position: relative; /* Clave: esto permite que el botón se mueva libremente aquí */
+            display: grid;
+            grid-template-rows: auto auto; /* Dos filas: Imagen y Botón */
+            justify-items: center;
             width: 450px;
+            gap: 0; /* Sin espacio entre ellos */
         }
 
         .imagen-tarjeta {
@@ -25,18 +27,6 @@
         }
 
         .btn-nospi {
-          position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* CAMBIA ESTO: De 95% a píxeles fijos */
-            /* Empieza probando con 300px o 350px e ir ajustando */
-            top: 170px; 
-            
-            margin: 0;
-            white-space: nowrap;
-            z-index: 10;
-            
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
@@ -45,7 +35,12 @@
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  
+            
+            /* Ajuste preciso sin caos: usamos margin-top negativo 
+               para subir el botón sobre la imagen de forma controlada */
+            margin-top: -65px; 
+            margin-bottom: 20px;
+            z-index: 10;
         }
     </style>
 </head>
