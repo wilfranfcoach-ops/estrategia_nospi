@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<style>
-    /* Aseguramos que el cuerpo no tenga espacios extra */
-    body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        background-color: #ffffff;
-    }
+    <style>
+        body {
+            margin: 0;
+            background-color: #ffffff; /* Fondo blanco garantizado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    /* 1. Este contenedor es el ancla. Todo lo de adentro se mueve con él. */
-    .contenedor-tarjeta {
-        position: relative;
-        width: 450px; /* Ajusta según el ancho de tu imagen */
-    }
+        /* 1. Usamos CSS Grid para unir la imagen y el botón en un solo bloque */
+        .tarjeta-container {
+            display: grid;
+            width: 450px; /* Ancho fijo de tu tarjeta */
+            justify-items: center;
+        }
 
-    .imagen-tarjeta {
-        width: 100%;
-        display: block;
-    }
+        .imagen-tarjeta {
+            width: 100%;
+            display: block;
+            grid-row: 1;
+            grid-column: 1;
+        }
 
-    /* 2. El botón ahora está atrapado dentro del contenedor */
-    .btn-nospi {
-        position: absolute;
-        bottom: 40px; /* Ajusta este valor para subir o bajarlo de la franja */
-        left: 50%;
-        transform: translateX(-50%);
-        
-        /* Estilos del botón */
-        padding: 10px 40px;
-        background: linear-gradient(135deg, #005a8d, #32d74b);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        z-index: 10;
-        white-space: nowrap;
-    }
-</style>
+        .btn-nospi {
+            grid-row: 1;
+            grid-column: 1;
+            z-index: 10;
+            
+            /* 2. Ajuste fino usando margen superior (margin-top) */
+            /* Este valor mueve el botón hacia abajo desde el borde superior de la tarjeta */
+            /* Aumenta el número para bajarlo, disminúyelo para subirlo */
+            margin-top: 385px; 
+            
+            padding: 10px 45px;
+            background: linear-gradient(135deg, #005a8d, #32d74b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="contenedor-tarjeta">
-        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono">
+    <div class="tarjeta-container">
+        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
