@@ -13,10 +13,13 @@
             background-color: #f0f0f0;
         }
 
-        /* 1. Este es tu "ancla" */
-        .contenedor-tarjeta {
-            position: relative; /* ¡Esto es la clave! */
-            width: 450px;       /* Ajusta el ancho de tu tarjeta */
+        /* El contenedor envuelve a ambos elementos */
+        .contenedor-principal {
+            position: relative;
+            width: 450px; /* Ancho fijo de tu tarjeta */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -24,12 +27,16 @@
             display: block;
         }
 
-        /* 2. El botón ahora vive dentro del contenedor */
         .btn-nospi {
-            position: absolute; 
-            bottom: 35px;       /* Distancia fija desde abajo */
-            left: 50%;          /* Centrado horizontal */
+            /* Posicionamos respecto a la tarjeta */
+            position: absolute;
+            left: 50%;
             transform: translateX(-50%);
+            
+            /* AJUSTE FINAL: 
+               Este valor controla la distancia desde el borde inferior de la tarjeta.
+               Aumenta este número para subir, disminúyelo para bajar. */
+            bottom: 45px; 
             
             /* Estilo del botón */
             padding: 8px 40px;
@@ -47,10 +54,11 @@
 </head>
 <body>
 
-    <div class="contenedor-tarjeta">
+    <div class="contenedor-principal">
         <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
 </body>
 </html>
+
