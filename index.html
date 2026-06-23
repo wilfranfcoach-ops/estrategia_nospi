@@ -14,7 +14,7 @@
 
         .contenedor-tarjeta {
             position: relative;
-            width: 450px; /* Tamaño fijo, no se mueve */
+            width: 450px;
         }
 
         .imagen-tarjeta {
@@ -27,14 +27,15 @@
             left: 50%;
             transform: translateX(-50%);
             
-            /* AQUÍ ESTÁ EL AJUSTE EXACTO EN PÍXELES */
-            /* Cambia este valor hasta que el botón tape perfectamente el hueco blanco */
-            top: 670px; 
+            /* AJUSTE: Aumenté de 670px a 690px para bajarlo un poco más */
+            top: 690px; 
+            
+            /* AJUSTE: Reduje el primer valor de 10px a 5px para hacerlo más delgado */
+            padding: 5px 40px; 
             
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
-            padding: 10px 40px; 
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
