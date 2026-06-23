@@ -12,9 +12,11 @@
             background-color: #f0f0f0;
         }
 
-        .contenedor-contenedor {
+        /* El contenedor es el "carril" que mantiene todo unido */
+        .tarjeta-container {
             width: 450px;
-            display: grid; /* El Grid mantiene todo unido como un solo bloque */
+            display: grid;
+            grid-template-rows: auto auto; /* Fila 1: Imagen, Fila 2: Botón */
             justify-items: center;
         }
 
@@ -22,18 +24,17 @@
             width: 100%;
             display: block;
             grid-row: 1;
-            grid-column: 1;
         }
 
         .btn-nospi {
-            grid-row: 1;
-            grid-column: 1;
-            
-            /* Esto mueve el botón hacia abajo dentro del mismo espacio de la imagen */
-            /* Si está muy arriba, aumenta este número. Si está muy abajo, redúcelo. */
-            margin-top: 380px; 
-            
+            grid-row: 1; /* El botón ocupa la misma fila que la imagen */
             z-index: 10;
+            
+            /* Ajuste de posición: 
+               Como ya no es absoluto, solo usamos margen para moverlo hacia abajo 
+               dentro de su propio contenedor. */
+            margin-top: 390px; 
+            
             padding: 8px 40px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -48,7 +49,7 @@
 </head>
 <body>
 
-    <div class="contenedor-contenedor">
+    <div class="tarjeta-container">
         <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
