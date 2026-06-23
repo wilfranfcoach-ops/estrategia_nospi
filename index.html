@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Descubre Nospi</title>
     <style>
-        /* Centrado absoluto en la pantalla */
         body {
             margin: 0;
             height: 100vh;
@@ -14,10 +13,9 @@
             background-color: #f8f9fa;
         }
 
+        /* Este contenedor es el "marco" de tu diseño */
         .contenedor-tarjeta {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative; /* Clave: esto permite que el botón se mueva libremente aquí */
             width: 450px;
         }
 
@@ -27,18 +25,23 @@
         }
 
         .btn-nospi {
+            position: absolute; /* Esto saca al botón del límite del texto */
+            left: 50%;
+            transform: translateX(-50%);
+            
+            /* AQUÍ CONTROLAS EL MOVIMIENTO LIBRE */
+            /* Aumenta este valor (ej: 85%) para BAJARLO */
+            /* Disminuye este valor (ej: 75%) para SUBIRLO */
+            top: 85%; 
+            
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
-            /* BOTÓN MÁS DELGADO: Reducimos el primer valor del padding (de 15px a 8px) */
             padding: 8px 40px; 
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            
-            /* Ajuste de posición */
-            margin-top: -30px !important; 
             z-index: 10;
         }
     </style>
