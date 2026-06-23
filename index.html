@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         body {
             margin: 0;
@@ -11,12 +14,13 @@
             min-height: 100vh;
         }
 
-        /* 1. Este contenedor es tu salvación: es el "padre" de ambos */
         .tarjeta-contenedor {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 450px; /* Ajusta este ancho si es necesario */
+            /* Usamos "max-width" en lugar de un ancho fijo para que en celular se adapte */
+            width: 90%; 
+            max-width: 450px; 
         }
 
         .imagen-tarjeta {
@@ -24,12 +28,8 @@
             display: block;
         }
 
-        /* 2. El botón ahora vive DENTRO del contenedor */
         .btn-nospi {
-            /* Usamos margen negativo para "subir" el botón sobre la imagen */
-            /* Si necesitas bajarlo 1cm, simplemente reduce este valor (ej. de -80px a -70px) */
             margin-top: -80px; 
-            
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -44,11 +44,9 @@
     </style>
 </head>
 <body>
-
     <div class="tarjeta-contenedor">
         <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
-
 </body>
 </html>
