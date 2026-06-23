@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            margin: 0;
-            background-color: #ffffff; /* Fondo blanco garantizado */
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
+<style>
+    /* Aseguramos que el cuerpo no tenga espacios extra */
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+    }
 
-        .tarjeta-container {
-            position: relative; /* Ancla necesaria para el botón */
-            width: 450px; 
-            margin-top: 20px;
-        }
+    /* 1. Este contenedor es el ancla. Todo lo de adentro se mueve con él. */
+    .contenedor-tarjeta {
+        position: relative;
+        width: 450px; /* Ajusta según el ancho de tu imagen */
+    }
 
-        .imagen-tarjeta {
-            width: 100%;
-            display: block;
-        }
+    .imagen-tarjeta {
+        width: 100%;
+        display: block;
+    }
 
-        .btn-nospi {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* AJUSTE FINO: 
-               Si al probarlo necesitas que baje más, aumenta este número (ej. 685px).
-               Si necesitas que suba, disminuye este número (ej. 675px). */
-            top: 680px; 
-            
-            padding: 10px 45px;
-            background: linear-gradient(135deg, #005a8d, #32d74b);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            z-index: 10;
-            white-space: nowrap;
-        }
-    </style>
+    /* 2. El botón ahora está atrapado dentro del contenedor */
+    .btn-nospi {
+        position: absolute;
+        bottom: 40px; /* Ajusta este valor para subir o bajarlo de la franja */
+        left: 50%;
+        transform: translateX(-50%);
+        
+        /* Estilos del botón */
+        padding: 10px 40px;
+        background: linear-gradient(135deg, #005a8d, #32d74b);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        z-index: 10;
+        white-space: nowrap;
+    }
+</style>
 </head>
 <body>
 
-    <div class="tarjeta-container">
-        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
+    <div class="contenedor-tarjeta">
+        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
