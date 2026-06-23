@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bono Nospi</title>
     <style>
         body {
             margin: 0;
@@ -13,32 +12,30 @@
             background-color: #f0f0f0;
         }
 
-        /* El contenedor envuelve a ambos elementos */
+        /* Contenedor que mantiene todo como un bloque único */
         .contenedor-principal {
-            position: relative;
-            width: 450px; /* Ancho fijo de tu tarjeta */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 450px; 
+            display: grid;
+            justify-items: center;
         }
 
         .imagen-tarjeta {
             width: 100%;
             display: block;
+            grid-row: 1;
+            grid-column: 1;
         }
 
         .btn-nospi {
-            /* Posicionamos respecto a la tarjeta */
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            grid-row: 1;
+            grid-column: 1;
+            z-index: 10;
             
-            /* AJUSTE FINAL: 
-               Este valor controla la distancia desde el borde inferior de la tarjeta.
-               Aumenta este número para subir, disminúyelo para bajar. */
-            bottom: 45px; 
+            /* Ajuste preciso para la franja blanca */
+            /* Si al probarlo lo quieres un poquito más abajo, aumenta este número */
+            /* Si lo quieres un poquito más arriba, disminuye este número */
+            margin-top: 385px; 
             
-            /* Estilo del botón */
             padding: 8px 40px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -48,7 +45,6 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             white-space: nowrap;
-            z-index: 10;
         }
     </style>
 </head>
@@ -61,4 +57,3 @@
 
 </body>
 </html>
-
