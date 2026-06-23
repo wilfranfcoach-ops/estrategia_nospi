@@ -2,56 +2,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Descubre Nospi</title>
     <style>
+        /* 1. Fondo blanco puro en toda la pantalla */
         body {
             margin: 0;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
         }
 
-        /* Contenedor que mantiene todo como un bloque único */
-        .contenedor-principal {
-            width: 450px; 
-            display: grid;
-            justify-items: center;
+        /* 2. El contenedor es el "ancla" donde vive el botón */
+        .tarjeta-container {
+            position: relative;
+            width: 450px;
         }
 
         .imagen-tarjeta {
             width: 100%;
             display: block;
-            grid-row: 1;
-            grid-column: 1;
         }
 
+        /* 3. Botón posicionado específicamente sobre el espacio blanco */
         .btn-nospi {
-            grid-row: 1;
-            grid-column: 1;
-            z-index: 10;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             
-            /* Ajuste preciso para la franja blanca */
-            /* Si al probarlo lo quieres un poquito más abajo, aumenta este número */
-            /* Si lo quieres un poquito más arriba, disminuye este número */
-            margin-top: 385px; 
+            /* Ajuste vertical: controla la altura exacta en la franja blanca */
+            /* Si quieres bajarlo, aumenta este valor. Si quieres subirlo, disminúyelo. */
+            top: 760px; 
             
-            padding: 8px 40px;
+            padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 10;
             white-space: nowrap;
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor-principal">
-        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono">
+    <div class="tarjeta-container">
+        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
