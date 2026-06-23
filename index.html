@@ -14,9 +14,11 @@
         }
 
         .contenedor-tarjeta {
-            /* El 'relative' es el ancla para el botón */
-            position: relative;
             width: 450px;
+            /* Aquí está el truco: columna flexible */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -25,18 +27,10 @@
         }
 
         .btn-nospi {
-            position: absolute;
+            /* Usamos un margen negativo pequeño para "subir" el botón sobre la imagen */
+            margin-top: -65px; 
             
-            /* CENTRADO HORIZONTAL */
-            left: 48.5%; 
-            transform: translateX(-50%);
-            
-            /* BAJAR EL BOTÓN */
-            /* Si necesitas bajarlo más, aumenta el número (ej. 390px) */
-            /* Si necesitas subirlo, disminuye el número (ej. 370px) */
-            margin-top: 380px; 
-            
-            /* ESTILO DEL BOTÓN */
+            /* Estilo del botón */
             padding: 5px 40px; 
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -46,7 +40,6 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
-            white-space: nowrap;
         }
     </style>
 </head>
@@ -59,4 +52,3 @@
 
 </body>
 </html>
-
