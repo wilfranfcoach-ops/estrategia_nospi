@@ -14,12 +14,9 @@
         }
 
         .contenedor-tarjeta {
-            position: relative;
+            /* Este es el marco que contiene todo */
+            position: relative; 
             width: 450px;
-            /* Flexbox aquí para alinear el botón internamente */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -28,10 +25,17 @@
         }
 
         .btn-nospi {
-            /* Ahora el botón se posiciona respecto al contenedor-tarjeta */
-            margin-top: -60px; /* Sube el botón sobre la imagen */
+            /* Posición absoluta para moverlo libremente sobre la imagen */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             
-            padding: 5px 40px; /* Botón delgado */
+            /* --- AJUSTE AQUÍ --- */
+            /* En lugar de 'top', usamos 'bottom'. 
+               Esto mide la distancia desde abajo hacia arriba. */
+            bottom: 60px; 
+            
+            padding: 5px 40px; 
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
@@ -40,6 +44,7 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
+            white-space: nowrap;
         }
     </style>
 </head>
