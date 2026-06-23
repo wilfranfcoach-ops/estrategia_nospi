@@ -14,11 +14,8 @@
         }
 
         .contenedor-tarjeta {
+            position: relative;
             width: 450px;
-            /* Aquí está el truco: columna flexible */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -27,10 +24,15 @@
         }
 
         .btn-nospi {
-            /* Usamos un margen negativo pequeño para "subir" el botón sobre la imagen */
-            margin-top: -65px; 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             
-            /* Estilo del botón */
+            /* ESTO SUBE EL BOTÓN */
+            /* Si quieres subirlo más, aumenta el número negativo (ej: -400px) */
+            /* Si quieres bajarlo, disminuye el número (ej: -380px) */
+            margin-top: -390px; 
+            
             padding: 5px 40px; 
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -40,6 +42,7 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -52,3 +55,4 @@
 
 </body>
 </html>
+
