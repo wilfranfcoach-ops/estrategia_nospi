@@ -12,13 +12,9 @@
             background-color: #f8f9fa;
         }
 
-        /* Creamos un contenedor que apila elementos verticalmente */
         .contenedor-tarjeta {
-            display: grid;
-            grid-template-rows: auto auto; /* Dos filas: Imagen y Botón */
-            justify-items: center;
-            width: 450px;
-            gap: 0; /* Sin espacio entre ellos */
+            position: relative;
+            width: 450px; /* Tamaño fijo, no se mueve */
         }
 
         .imagen-tarjeta {
@@ -27,20 +23,24 @@
         }
 
         .btn-nospi {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            /* AQUÍ ESTÁ EL AJUSTE EXACTO EN PÍXELES */
+            /* Cambia este valor hasta que el botón tape perfectamente el hueco blanco */
+            top: 670px; 
+            
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
-            padding: 8px 40px; 
+            padding: 10px 40px; 
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            
-            /* Ajuste preciso sin caos: usamos margin-top negativo 
-               para subir el botón sobre la imagen de forma controlada */
-            margin-top: -65px; 
-            margin-bottom: 20px;
             z-index: 10;
+            white-space: nowrap;
         }
     </style>
 </head>
