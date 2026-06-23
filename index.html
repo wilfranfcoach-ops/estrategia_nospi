@@ -3,52 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Felicidades!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        /* El contenedor principal centra todo */
-        .contenedor-principal {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* Este es el bloque que mantiene a la imagen y al botón juntos */
-        .tarjeta-unidad {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 400px; /* Ajusta según el tamaño de tu imagen */
-        }
-
-        .imagen-tarjeta {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* El botón ahora depende del contenedor, no de la pantalla */
-        .boton-nospi {
-            margin-top: -50px; /* Este número negativo es el que lo "sube" a la franja */
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #005a8d, #32d74b);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10;
-        }
+        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #fff9f0; display: flex; flex-direction: column; justify-content: center; height: 100vh; margin: 0; }
+        .card { background: white; margin: 20px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px solid #e67e22; }
+        h1 { color: #e67e22; font-size: 2.5rem; margin-bottom: 10px; }
+        p { color: #5d4037; font-size: 1.2rem; }
+        .pan { font-size: 80px; margin: 20px 0; }
+        .btn { background-color: #e67e22; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
-
-    <div class="contenedor-principal">
-        <div class="tarjeta-unidad">
-            <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
-            <button class="boton-nospi">Descubre Nospi</button>
-        </div>
+    <div class="card">
+        <h1>¡ERES GANADOR! 🥖</h1>
+        <div class="pan">🥐🍫</div>
+        <p>Por tu primera recarga, te has ganado un delicioso</p>
+        <p><strong>PAN DE CHOCOLATE</strong></p>
+        <p>Muestra esta pantalla en la caja para reclamarlo.</p>
+        <a href="#" class="btn" onclick="lanzarConfeti()">¡Celebrar de nuevo!</a>
     </div>
 
+    <script>
+        // Lanzar confeti al cargar
+        window.onload = function() {
+            lanzarConfeti();
+        };
+
+        function lanzarConfeti() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#e67e22', '#f1c40f', '#5d4037']
+            });
+        }
+    </script>
 </body>
 </html>
