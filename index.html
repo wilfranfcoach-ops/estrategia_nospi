@@ -11,10 +11,12 @@
             min-height: 100vh;
         }
 
-        /* Contenedor que actúa como ancla */
-        .tarjeta-container {
-            position: relative; /* ¡CLAVE! Todo lo de adentro se posiciona respecto a esto */
-            width: 450px;
+        /* 1. Este contenedor es tu salvación: es el "padre" de ambos */
+        .tarjeta-contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 450px; /* Ajusta este ancho si es necesario */
         }
 
         .imagen-tarjeta {
@@ -22,15 +24,11 @@
             display: block;
         }
 
+        /* 2. El botón ahora vive DENTRO del contenedor */
         .btn-nospi {
-            position: absolute; /* Se despega del flujo normal para flotar sobre la imagen */
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* AJUSTE FINO:
-               Este valor controla la posición desde el borde superior de la tarjeta.
-               Como se bajó mucho antes, vamos a reducir este valor para que suba. */
-            top: 380px; 
+            /* Usamos margen negativo para "subir" el botón sobre la imagen */
+            /* Si necesitas bajarlo 1cm, simplemente reduce este valor (ej. de -80px a -70px) */
+            margin-top: -80px; 
             
             padding: 10px 45px;
             background: linear-gradient(135deg, #005a8d, #32d74b);
@@ -40,14 +38,14 @@
             font-weight: bold;
             font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             z-index: 10;
         }
     </style>
 </head>
 <body>
 
-    <div class="tarjeta-container">
+    <div class="tarjeta-contenedor">
         <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
         <button class="btn-nospi">Descubre Nospi</button>
     </div>
