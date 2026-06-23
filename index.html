@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Nospi</title>
     <style>
-        /* Contenedor que agrupa la imagen y el botón */
+        /* Centrado global de la página */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        /* Contenedor padre que mantiene todo unido */
         .contenedor-tarjeta {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 450px; /* Ajusta el ancho de tu tarjeta aquí */
+            width: 100%;
+            max-width: 450px; /* Aquí fijamos el ancho máximo */
             margin: 0 auto;
         }
 
+        /* La imagen siempre ocupará el 100% del contenedor de 450px */
         .imagen-tarjeta {
             width: 100%;
             display: block;
         }
 
+        /* El botón */
         .btn-nospi {
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
@@ -23,22 +41,30 @@
             padding: 15px 40px;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 16px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
             
-            /* AJUSTE FINAL: Este es el único número que debes tocar */
-            /* Si está muy arriba, aumenta el número (ej: -90px) */
-            /* Si está muy abajo, disminuye el número (ej: -70px) */
-            margin-top: -75px; 
-            margin-bottom: 20px;
+            /* Ajuste vertical: cambia este valor para moverlo */
+            /* -85px es el valor base. Si quieres bajarlo, intenta con -75px */
+            margin-top: -85px; 
+            margin-bottom: 30px;
+        }
+
+        .btn-nospi:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
     <div class="contenedor-tarjeta">
-        <img src="fondo_bono2.png" class="imagen-tarjeta">
-        <button class="btn-nospi">Descubre Nospi</button>
+        <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
+
+        <button class="btn-nospi" onclick="window.location.href='#'">
+            Descubre Nospi
+        </button>
     </div>
 
 </body>
