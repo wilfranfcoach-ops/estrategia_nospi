@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Descubre Nospi</title>
-    <style>
-        body {
-            margin: 0;
+   <style>
+        /* Contenedor que agrupa la imagen y el botón */
+        .contenedor-tarjeta {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f8f9fa;
+            width: 450px; /* Ajusta el ancho de tu tarjeta aquí */
+            margin: 0 auto;
         }
 
-        .contenedor-principal {
-            position: relative;
-            width: 450px; /* Ancho fijo para que no se mueva */
-        }
-
-        .mi-imagen {
+        .imagen-tarjeta {
             width: 100%;
             display: block;
         }
 
         .btn-nospi {
-            position: absolute;
-            /* Estos valores mueven el botón con precisión de píxel */
-            top: 79%; 
-            left: 50%;
-            transform: translateX(-50%);
-            
-            /* Estilo del botón */
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
             padding: 15px 40px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 16px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            white-space: nowrap;
+            
+            /* AJUSTE FINAL: Este es el único número que debes tocar */
+            /* Si está muy arriba, aumenta el número (ej: -90px) */
+            /* Si está muy abajo, disminuye el número (ej: -70px) */
+            margin-top: -80px; 
+            margin-bottom: 20px;
         }
     </style>
 </head>
