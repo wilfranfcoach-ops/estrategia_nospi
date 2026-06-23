@@ -14,6 +14,7 @@
         }
 
         .contenedor-tarjeta {
+            /* El 'relative' es el ancla para el botón */
             position: relative;
             width: 450px;
         }
@@ -26,17 +27,16 @@
         .btn-nospi {
             position: absolute;
             
-            /* --- AJUSTES FINALES --- */
-            /* 1. Mover a la IZQUIERDA: disminuye el valor (48.5%) */
+            /* CENTRADO HORIZONTAL */
             left: 48.5%; 
-            
-            /* 2. Mover hacia ABAJO: aumenta el valor del bottom */
-            /* Si quieres bajarlo más, disminuye este número (ej. 30px) */
-            bottom: 40px; 
-            
             transform: translateX(-50%);
-            /* ------------------------ */
             
+            /* BAJAR EL BOTÓN */
+            /* Si necesitas bajarlo más, aumenta el número (ej. 390px) */
+            /* Si necesitas subirlo, disminuye el número (ej. 370px) */
+            margin-top: 380px; 
+            
+            /* ESTILO DEL BOTÓN */
             padding: 5px 40px; 
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
