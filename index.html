@@ -13,10 +13,10 @@
             background-color: #f0f0f0;
         }
 
-        /* Este contenedor actúa como el "ancla" para el botón */
+        /* 1. Este es tu "ancla" */
         .contenedor-tarjeta {
-            position: relative; 
-            width: 450px; /* Ajusta este ancho según necesites */
+            position: relative; /* ¡Esto es la clave! */
+            width: 450px;       /* Ajusta el ancho de tu tarjeta */
         }
 
         .imagen-tarjeta {
@@ -24,15 +24,12 @@
             display: block;
         }
 
+        /* 2. El botón ahora vive dentro del contenedor */
         .btn-nospi {
-            position: absolute; /* Esto permite moverlo libremente sobre la imagen */
-            left: 50%;
-            transform: translateX(-50%); /* Centrado horizontal perfecto */
-            
-            /* --- AJUSTE AQUÍ --- */
-            /* Cambia este valor para subir o bajar el botón */
-            /* Menos píxeles = más arriba, Más píxeles = más abajo */
-            bottom: 30px; 
+            position: absolute; 
+            bottom: 35px;       /* Distancia fija desde abajo */
+            left: 50%;          /* Centrado horizontal */
+            transform: translateX(-50%);
             
             /* Estilo del botón */
             padding: 8px 40px;
