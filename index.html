@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Descubre Nospi</title>
     <style>
-        /* Centrado de toda la página */
         body {
             margin: 0;
             display: flex;
@@ -14,10 +13,13 @@
             background-color: #f8f9fa;
         }
 
-        /* Contenedor principal para anclar el botón */
         .contenedor-tarjeta {
             position: relative;
             width: 450px;
+            /* Flexbox aquí para alinear el botón internamente */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .imagen-tarjeta {
@@ -26,19 +28,10 @@
         }
 
         .btn-nospi {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            /* Ahora el botón se posiciona respecto al contenedor-tarjeta */
+            margin-top: -60px; /* Sube el botón sobre la imagen */
             
-            /* --- AJUSTE EXACTO --- */
-            /* Si quieres subirlo, disminuye este número (ej. 540px) */
-            /* Si quieres bajarlo, aumenta este número (ej. 560px) */
-            top: 550px; 
-            
-            /* Padding para el grosor del botón */
-            padding: 5px 40px; 
-            /* --------------------- */
-            
+            padding: 5px 40px; /* Botón delgado */
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
@@ -47,7 +40,6 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             z-index: 10;
-            white-space: nowrap;
         }
     </style>
 </head>
