@@ -2,16 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubre Nospi</title>
-   <style>
+    <style>
+        /* Centrado absoluto en la pantalla */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
         .contenedor-tarjeta {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 450px;
-            margin: 0 auto;
-            position: relative;
         }
 
         .imagen-tarjeta {
@@ -23,17 +30,15 @@
             background: linear-gradient(135deg, #005a8d, #32d74b);
             color: white;
             border: none;
-            padding: 10px 30px;
+            /* BOTÓN MÁS DELGADO: Reducimos el primer valor del padding (de 15px a 8px) */
+            padding: 8px 40px; 
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             
-            /* FUERZA EL MOVIMIENTO */
-            /* Cambia -80px por -60px para bajarlo, o -100px para subirlo */
+            /* Ajuste de posición */
             margin-top: -60px !important; 
-            margin-bottom: 20px;
-            position: relative;
             z-index: 10;
         }
     </style>
@@ -42,10 +47,7 @@
 
     <div class="contenedor-tarjeta">
         <img src="fondo_bono2.png" class="imagen-tarjeta" alt="Bono Nospi">
-
-        <button class="btn-nospi" onclick="window.location.href='#'">
-            Descubre Nospi
-        </button>
+        <button class="btn-nospi">Descubre Nospi</button>
     </div>
 
 </body>
